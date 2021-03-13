@@ -1,24 +1,48 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## hikers テーブル
 
-Things you may want to cover:
+| Column   | Type    | Options     |
+| -------- | ------  | ----------- |
+| name     | string  | null: false |
+| email    | string  | null: false |
+| password | string  | null: false |
+| age      | integer | null: false |
+| Weight   | integer | null: false |
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+### Association
 
-* Database creation
+- has_many :mountain_hikers
+- has_many :mountains, through: mountain_hikers
 
-* Database initialization
+## mountains テーブル
 
-* How to run the test suite
+| Column           | Type       | Options     |
+| ---------------  | ---------- | ----------- |
+| elevation        | integer     | null: false |
+| level_id         | integer    | null: false |
+| time_id          | integer    | null: false |
+| prefectures_id   | integer    | null: false |
+| municipality     | string     | null: false |
+| address          | string     | null: false |
+ 
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+### Association
 
-* ...
+- has_many :mountain_hikers
+- has_many :hiker, through: mountain_hikers
+
+## mountain_hikers テーブル 
+
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| hiker       | references | null: false, foreign_key: true |
+| mountain    | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :mountain
+- belongs_to :hiker
+

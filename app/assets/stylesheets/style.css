@@ -43,7 +43,11 @@
 }
 
 .header-login {
-  color: #999;
+  font-weight: bold;
+  color: #fff;
+  background: #00b5ad;
+  border: 1px #00b5ad solid;
+  border-radius: 3px;
 }
 
 .header-post {
@@ -53,6 +57,14 @@
   border: 1px #00b5ad solid;
   border-radius: 3px;
 }
+
+.footer-hikers {
+  padding-bottom: 0.35em;
+  font-size: 1.5em;
+  color: #333;
+  border-bottom: 3px solid #ccc;
+}
+
 
 @media screen and (max-width: 480px) {
   .header-post {

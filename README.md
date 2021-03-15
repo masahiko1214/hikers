@@ -20,12 +20,14 @@
 
 | Column           | Type       | Options     |
 | ---------------  | ---------- | ----------- |
-| elevation        | integer     | null: false |
+| elevation        | integer    | null: false |
 | level_id         | integer    | null: false |
 | time_id          | integer    | null: false |
 | prefectures_id   | integer    | null: false |
 | municipality     | string     | null: false |
 | address          | string     | null: false |
+| name             | string     | null: false |
+| explanation      | text       | null: false |
  
 
 

@@ -1,0 +1,20 @@
+
+<ul class='mountain-lists'>
+<% @mountains.each do |mountain| %>
+      <li class='list'>
+        <%= link_to "#" do %>
+        <div class='mountain-img-content'>
+          <%#= image_tag(mountain.image, class: "item-img") %>
+        </div>
+        <div class='mountain-info'>
+          <h3 class='mountain-name'>
+            <%= mountain.name %>
+          </h3>
+          <div class='mountain-price'>
+            <span><%= mountain.name %>円<br><%= mountain.name %></span>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </li>
+</ul>

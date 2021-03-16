@@ -10,6 +10,23 @@
   </head>
 
   <body>
+  <header class="header-3">
+  <div class="header-inner">
+    <%= image_tag "hikers.png", class:"hikers-icon" %>
+    <nav class="header-nav">
+      <div class="header-nav-item">
+        <a class="header-button header-post">新規投稿</a>
+      </div>
+      <div class="header-nav-item">
+        <a class="header-button header-login">ログイン</a>
+      </div>
+    </nav>
+  </div>
+</header>
+    </header>
     <%= yield %>
+    <footer>
+    <h2 class="footer-hikers">Copyright hikers 2021.</h2>
+    </footer>
   </body>
 </html>

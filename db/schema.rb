@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 2021_03_14_082941) do
     t.text "explanation", null: false
     t.integer "elevation", null: false
     t.integer "level_id", null: false
-    t.integer "time_id", null: false
-    t.integer "prefectures_id", null: false
+    t.integer "time_mountain_id", null: false
+    t.integer "prefecture_id", null: false
     t.string "municipality", null: false
     t.string "address", null: false
     t.datetime "created_at", precision: 6, null: false

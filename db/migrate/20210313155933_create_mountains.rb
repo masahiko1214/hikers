@@ -5,8 +5,8 @@ class CreateMountains < ActiveRecord::Migration[6.0]
       t.text :explanation, null: false
       t.integer :elevation, null: false
       t.integer :level_id, null: false
-      t.integer :time_id, null: false
-      t.integer :prefectures_id, null: false
+      t.integer :time_mountain_id, null: false
+      t.integer :prefecture_id, null: false
       t.string :municipality, null: false
       t.string :address, null: false
       t.timestamps

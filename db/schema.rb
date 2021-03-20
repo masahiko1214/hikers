@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_14_082941) do
+ActiveRecord::Schema.define(version: 2021_03_18_094425) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -31,6 +31,21 @@ ActiveRecord::Schema.define(version: 2021_03_14_082941) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "hikers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "name", null: false
+    t.integer "age", null: false
+    t.integer "weight", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_hikers_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_hikers_on_reset_password_token", unique: true
   end
 
   create_table "mountains", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

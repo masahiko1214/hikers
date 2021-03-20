@@ -7,7 +7,7 @@
 | email    | string  | null: false |
 | password | string  | null: false |
 | age      | integer | null: false |
-| Weight   | integer | null: false |
+| weight   | integer | null: false |
 
 
 

@@ -15,10 +15,12 @@
     <%= image_tag "hikers.png", class:"hikers-icon" %>
     <nav class="header-nav">
       <div class="header-nav-item">
-        <a class="header-button header-post">新規投稿</a>
+        
+        <%= link_to '新規登録', new_hiker_registration_path , class: "header-button header-post" %>
       </div>
       <div class="header-nav-item">
-        <a class="header-button header-login">ログイン</a>
+      <%= link_to 'ログイン', new_hiker_session_path , class: "header-button header-login" %>
+        
       </div>
     </nav>
   </div>

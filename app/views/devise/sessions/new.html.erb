@@ -1,0 +1,22 @@
+
+
+<div class="form-login">
+ <div class="form-main-login">
+     <div class="form-header-login">
+       <h1>会員情報入力</h1>
+     </div>
+   <%= form_with model:@hiker,url: hiker_session_path, class: '#', local: true do |f| %>
+      <div class="label-login">
+        <%= f.label :email, "メールアドレス" %><br />
+        <%= f.email_field :email, autofocus: true,class:"login-field" %>
+      </div>
+       <div class="label-login">
+         <%= f.label :password, "パスワード" %><br />
+         <%= f.password_field :password,class:"login-field" %>
+      </div>
+      <div class="login-button">
+         <%= f.submit "Log in",class:"login-submit" %>
+      </div>
+   <% end %>
+ </div>
+</div>

@@ -7,7 +7,7 @@
 | email    | string  | null: false |
 | password | string  | null: false |
 | age      | integer | null: false |
-| Weight   | integer | null: false |
+| weight   | integer | null: false |
 
 
 
@@ -18,16 +18,16 @@
 
 ## mountains テーブル
 
-| Column           | Type       | Options     |
-| ---------------  | ---------- | ----------- |
-| elevation        | integer    | null: false |
-| level_id         | integer    | null: false |
-| time_id          | integer    | null: false |
-| prefectures_id   | integer    | null: false |
-| municipality     | string     | null: false |
-| address          | string     | null: false |
-| name             | string     | null: false |
-| explanation      | text       | null: false |
+| Column            | Type       | Options     |
+| ----------------- | ---------- | ----------- |
+| elevation         | integer    | null: false |
+| level_id          | integer    | null: false |
+| time_mountain_id  | integer    | null: false |
+| prefectures_id    | integer    | null: false |
+| municipality      | string     | null: false |
+| address           | string     | null: false |
+| name              | string     | null: false |
+| explanation       | text       | null: false |
  
 
 

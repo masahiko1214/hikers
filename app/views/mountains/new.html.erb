@@ -1,129 +1,78 @@
 
- <div class="form-content"> <%# 全体の親要素 %>
-
+<div class="form-content"> <%# 全体の親要素 %>
  <div class="form-main">   <%# formのセンター要素 %>
-<%= form_with model: @mountain, local: true do |f| %>
-
-<%= render 'shared/error_messages', model: f.object %>
-
- <div class="form-header">
-    <h1 class="form-header-text">
-      山の情報を入力します
-    </h1>
+       <%= form_with model: @mountain, local: true do |f| %>
+         <%= render 'shared/error_messages', model: f.object %>
+        <div class="form-header">
+             <h1 class="form-header-text">
+                山の情報を入力します
+             </h1>
+        </div>
+       <div class="img-upload">
+                <h1 class="form-upload-text">
+                  山のイメージ画像
+               </h1>
+             <div class="img-upload-image">
+                   <p> クリックしてファイルをアップロード
+                   </p>
+                      <%= f.file_field :image %>
+             </div>
+       </div>
+        <div class="form-group">
+               <h1 class="form-name">
+                 山の名前を入力して下さい
+              </h1>
+              <%= f.text_area :name, class:"form-name-mountain", placeholder:"山名（必須 40文字まで)" %>
+         </div>
+        <div class="form-group">
+             <h1 class="form-name">
+               山の注意事項や説明をしてください
+             </h1>
+                 <%= f.text_area :explanation, class:"form-mountain-explanation", placeholder:"山の説明（例：この山の登山口は⚪︎⚪︎駐車場/⚪︎⚪︎峠にあります、登山道は比較的に舗装されており初心者も登り易くなっています、途中休憩施設もありそこには自販機やトイレ等もありました）"  %>
+        </div>
+         <div class="form-group">
+                  <h1 class="form-name">
+                      山の標高
+                  </h1>
+                <%= f.text_field :elevation, class:"form-mountain-elevation",  placeholder:"例）1400m等 " %>
+         </div>
+         <div class="form-group">
+              <h1 class="form-name">
+                  山の難易度
+              </h1>
+              <%= f.collection_select(:level_id, Level.all, :id, :name, {}, class:"form-select") %>
+         </div>
+           <div class="form-group">
+              <h1 class="form-name">
+                   山頂から下山までの時間
+              </h1>
+                <%= f.collection_select(:time_mountain_id, TimeMountain.all, :id, :name, {}, class:"form-select") %>
+           </div>
+           <div class="form-group">
+                  <h1 class="form-name">
+                      山のある都道府県
+                  </h1>
+                <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, class:"form-select") %>
+           </div>
+                <div class="form-group">
+                 <h1 class="form-name">
+                    山のある市町村
+                </h1>
+                       <%= f.text_field :municipality, class:"form-mountain-municipality",  placeholder:"例）福岡市 " %>
+           </div>
+            <div class="form-group">
+                <h1 class="form-name">
+                       山のある住所
+                </h1>
+                     <%= f.text_field :address, class:"form-mountain-address",  placeholder:"例）青山1-1 " %>
+            </div>
+           <div class="form-group">
+              <h1 class="form-name">
+                   <%= f.submit "投稿する" ,class:"sell-btn" %>
+              </h1>
+           </div>
+       <% end %>
  </div>
-
-<div class="img-upload">
-<h1 class="form-upload-text">
-      山のイメージ画像
-    </h1>
-
-<div class="img-upload-image">
-<p>
-          クリックしてファイルをアップロード
-        </p>
-<%= f.file_field :image %>
 </div>
- </div>
-
-
-
- <div class="form-group">
-
-<h1 class="form-name">
-      山の名前を入力して下さい
-    </h1>
-
-<%= f.text_area :name, class:"form-name-mountain", placeholder:"山名（必須 40文字まで)" %>
-</div>
-
-
-
-
-
- <div class="form-group">
-
-<h1 class="form-name">
-      山の注意事項や説明をしてください
-    </h1>
-
-<%= f.text_area :explanation, class:"form-mountain-explanation", placeholder:"山の説明（例：この山の登山口は⚪︎⚪︎駐車場/⚪︎⚪︎峠にあります、登山道は比較的に舗装されており初心者も登り易くなっています、途中休憩施設もありそこには自販機やトイレ等もありました）"  %>
- </div>
-
-
- <div class="form-group">
-<h1 class="form-name">
-      山の標高
-    </h1>
-<%= f.text_field :elevation, class:"form-mountain-elevation",  placeholder:"例）1400m等 " %>
-
- </div>
-
-
-
-
- <div class="form-group">
-<h1 class="form-name">
-      山の難易度
-</h1>
-<%= f.collection_select(:level_id, Level.all, :id, :name, {}, class:"form-select") %>
-
- </div>
-
- <div class="form-group">
-<h1 class="form-name">
-      山頂から下山までの時間
-</h1>
-
-<%= f.collection_select(:time_mountain_id, TimeMountain.all, :id, :name, {}, class:"form-select") %>
-
-
-</div>
-<div class="form-group">
- <h1 class="form-name">
-      山のある都道府県
-</h1>
-
- <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, class:"form-select") %>
-
-</div>
-
-
- <div class="form-group">
-<h1 class="form-name">
-      山のある市町村
-</h1>
-
-<%= f.text_field :municipality, class:"form-mountain-municipality",  placeholder:"例）福岡市 " %>
-
- </div>
-
- <div class="form-group">
- <h1 class="form-name">
-      山のある住所
-</h1>
-
-<%= f.text_field :address, class:"form-mountain-address",  placeholder:"例）青山1-1 " %>
-
- </div>
-
-<div class="form-group">
-<h1 class="form-name">
-    <%= f.submit "投稿する" ,class:"sell-btn" %>
-</h1>
- 
-
-</div>
-
-
-
-
-
-
-
-
-
-<% end %>
- </div>
- </div>
 
  

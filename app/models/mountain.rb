@@ -2,7 +2,8 @@ class Mountain < ApplicationRecord
 
   
   has_one_attached :image
-  
+  has_many :mountain_hikers
+  has_many :hikers, through: :mountain_hikers
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :Level

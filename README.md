@@ -23,7 +23,7 @@
 | elevation         | integer    | null: false |
 | level_id          | integer    | null: false |
 | time_mountain_id  | integer    | null: false |
-| prefectures_id    | integer    | null: false |
+| prefecture_id    | integer    | null: false |
 | municipality      | string     | null: false |
 | address           | string     | null: false |
 | name              | string     | null: false |
@@ -34,7 +34,7 @@
 ### Association
 
 - has_many :mountain_hikers
-- has_many :hiker, through: mountain_hikers
+- has_many :hikers, through: mountain_hikers
 
 ## mountain_hikers テーブル 
 

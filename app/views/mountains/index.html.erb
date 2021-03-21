@@ -1,17 +1,22 @@
 
+<div class='mountain-new'>
+   <%= link_to '新規山登録', new_mountain_path , class: "mountain-form" %>
+</div>
+
+
 <ul class='mountain-lists'>
 <% @mountains.each do |mountain| %>
-      <li class='list'>
+      <li class='mountain-list'>
         <%= link_to "#" do %>
         <div class='mountain-img-content'>
-          <%#= image_tag(mountain.image, class: "item-img") %>
+          <%= image_tag(mountain.image, class: "mountain-img") %>
         </div>
         <div class='mountain-info'>
           <h3 class='mountain-name'>
             <%= mountain.name %>
           </h3>
-          <div class='mountain-price'>
-            <span><%= mountain.name %>円<br><%= mountain.name %></span>
+          <div class='mountain-address'>
+            <span><%= mountain.elevation %>M<br><%= mountain.prefecture.name %></span>
           </div>
         </div>
         <% end %>

@@ -1,33 +1,42 @@
-<div class="form-login">
-<div class="form-main-login">
+<div class="form-registration">
+ <div class="form-main-registration">
+    <div class="form-header-registration">
+       <h1>会員情報登録</h1>
+    </div>
+      <%= form_with model:@hiker,url: hiker_registration_path, class: '#', local: true do |f| %> <%#パスは省力可能、データを送るのでHTTPはPOST %>
 
-<div class="form-header-login">
-<h1>会員情報入力</h1>
+         <div class="label-registration">
+            <%= f.label :email,"メールアドレス" %><br />
+            <%= f.email_field :email,class:"registration-field", autofocus: true  %>
+         </div>
+
+          <div class="label-registration">
+            <%= f.label :password,"パスワード" %>
+             <%= f.password_field :password,class:"registration-field" %>
+          </div>
+
+            <div class="label-registration">
+               <%= f.label :password_confirmation, "もう一度パスワード" %><br />
+              <%= f.password_field :password_confirmation,class:"registration-field" %>
+           </div>
+
+            <div class="label-registration">
+               <%= f.label :password_confirmation, "年齢" %><br />
+              <%= f.text_field :age, class:"registration-field" %>
+           </div>
+            
+            <div class="label-registration">
+               <%= f.label :password_confirmation, "体重" %><br />
+              <%= f.text_field :weight, class:"registration-field" %>
+           </div>
+
+
+                 <div class="registration-button">
+                     <%= f.submit "新規登録",class:"registration-submit" %>
+                    </div>
+
+    <% end %>
+ </div>
 </div>
-<%= form_with model:@hiker,url: hiker_session_path, class: 'registration-main', local: true do |f| %>
-
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
 
 

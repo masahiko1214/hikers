@@ -6,7 +6,7 @@ class Mountain < ApplicationRecord
   has_many :hikers, through: :mountain_hikers
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :Level
+  belongs_to :level
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :time_mountain

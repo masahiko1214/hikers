@@ -5,9 +5,16 @@
     </div>
       <%= form_with model:@hiker,url: hiker_registration_path, class: '#', local: true do |f| %> <%#パスは省力可能、データを送るのでHTTPはPOST %>
 
+      <%= render 'shared/error_messages', model: f.object %>
+
+           <div class="label-registration">
+               <%= f.label :password_confirmation, "名前" %><br />
+              <%= f.text_field :name, class:"registration-field" %>
+           </div>
+
          <div class="label-registration">
             <%= f.label :email,"メールアドレス" %><br />
-            <%= f.email_field :email,class:"registration-field", autofocus: true  %>
+            <%= f.email_field :email,class:"registration-field"  %>
          </div>
 
           <div class="label-registration">

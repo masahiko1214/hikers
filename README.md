@@ -23,7 +23,7 @@
 | elevation         | integer    | null: false |
 | level_id          | integer    | null: false |
 | time_mountain_id  | integer    | null: false |
-| prefecture_id    | integer    | null: false |
+| prefecture_id     | integer    | null: false |
 | municipality      | string     | null: false |
 | address           | string     | null: false |
 | name              | string     | null: false |

@@ -5,5 +5,5 @@ class Hiker < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          has_many :mountain_hikers
-         has_many :mountains, through: mountain_hikers
+         has_many :mountains, through: :mountain_hikers
 end

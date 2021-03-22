@@ -20,6 +20,13 @@ class MountainsController < ApplicationController
     end
   end
 
+  def show
+    @mountain = Mountain.find(params[:id])
+  end
+
+  def edit
+    
+  end
 
   def mountain_params
     params.require(:mountain).permit(:name, :explanation, :elevation, :level_id, :time_mountain_id, :prefecture_id,

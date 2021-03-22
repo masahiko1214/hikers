@@ -22,6 +22,12 @@ a {
   
 }
 
+.explanation{
+  font-size: 1.7rem;
+  font-family: fantasy;
+  color: brown;
+}
+
 .mountain-form:hover{
   padding: 0.1em 0.5em;
   font-size: 2rem;

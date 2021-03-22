@@ -3,11 +3,15 @@
    <%= link_to '新規山登録', new_mountain_path , class: "mountain-form" %>
 </div>
 
+<div class='mountain-new'>
+  <div class='explanation'> \ 下の画像をクリックで山の詳細ページへ / </div>
+</div>
+
 
 <ul class='mountain-lists'>
 <% @mountains.each do |mountain| %>
       <li class='mountain-list'>
-        <%= link_to "#" do %>
+        <%= link_to mountain_path(mountain.id) do %>
         <div class='mountain-img-content'>
           <%= image_tag(mountain.image, class: "mountain-img") %>
         </div>

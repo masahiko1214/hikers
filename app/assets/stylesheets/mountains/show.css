@@ -68,6 +68,12 @@
 
 
 
+.show-label{
+  font-weight: bold;
+  border-bottom: 0.1rem solid crimson;
+  margin: 0.7rem;
+}
+
 .show-main-content{
   font-size: 1.1rem;
   text-align: center;
@@ -77,10 +83,4 @@
   justify-content: center;
   margin-bottom: 0.5rem;
   
-}
-
-.show-label{
-  font-weight: bold;
-  border-bottom: 0.1rem solid crimson;
-  margin: 0.7rem;
 }

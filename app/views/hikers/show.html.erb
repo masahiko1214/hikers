@@ -1,0 +1,45 @@
+<div class="mypeage">
+    <div class="mypeage-main">
+       <div class="mypeage-top">
+             ようこそ<%= @hiker.name %>さん、良い山ライフを！！
+       </div>
+
+       <div class="mypeage-advise">
+              下の表を消費カロリーの参考にしてください
+       </div>
+    </div>
+</div>
+
+<div class="mypeage-show">
+   <div class="mypeage-show-main">
+     <div class="mypeage-show-contents">
+
+       <div class="mypeage-main-content">
+       <div class="mypeage-label"><%= @hiker.name %>さんが初心者,初級者の山を1時間登った場合</div>
+       消費カロリーは<%= @hiker.calorie_easy %>kal程度です
+       </div>
+
+
+       <div class="mypeage-main-content">
+       <div class="mypeage-label"><%= @hiker.name %>さんが中級者の山を1時間登った場合</div>
+       消費カロリーは<%= @hiker.calorie_normal %>kal程度です
+       </div>
+
+       <div class="mypeage-main-content">
+       <div class="mypeage-label"><%= @hiker.name %>さんが上級者の山を1時間登った場合</div>
+       消費カロリーは<%= @hiker.calorie_hard %>kal程度です
+       </div>
+
+
+
+
+
+
+
+      </div>
+   </div>
+</div>
+
+       <div class="mypeage-btn">
+       <%= link_to "登る山を探す", "#" ,class:"mypeage-go-btn"%>
+       </div>

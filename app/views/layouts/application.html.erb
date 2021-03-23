@@ -14,14 +14,22 @@
   <div class="header-inner">
     <%= image_tag "hikers.png", class:"hikers-icon" %>
     <nav class="header-nav">
+
+<% if hiker_signed_in? %>
+ <div class="header-nav-item">
+        <%= link_to 'マイページ', hiker_path(current_hiker.id) , class: "header-button header-post" %>
+      </div>
       <div class="header-nav-item">
-        
+      <%= link_to 'ログアウト', destroy_hiker_session_path , method: :delete, class: "header-button header-log" %>
+
+<% else %>
+      <div class="header-nav-item">
         <%= link_to '新規登録', new_hiker_registration_path , class: "header-button header-post" %>
       </div>
       <div class="header-nav-item">
-      <%= link_to 'ログイン', new_hiker_session_path , class: "header-button header-login" %>
-        
+      <%= link_to 'ログイン', new_hiker_session_path , class: "header-button header-log" %>
       </div>
+      <% end %>
     </nav>
   </div>
 </header>

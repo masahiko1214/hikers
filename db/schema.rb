@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_21_111941) do
+ActiveRecord::Schema.define(version: 2021_03_23_150026) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -48,15 +48,6 @@ ActiveRecord::Schema.define(version: 2021_03_21_111941) do
     t.index ["reset_password_token"], name: "index_hikers_on_reset_password_token", unique: true
   end
 
-  create_table "mountain_hikers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "hiker_id"
-    t.bigint "mountain_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["hiker_id"], name: "index_mountain_hikers_on_hiker_id"
-    t.index ["mountain_id"], name: "index_mountain_hikers_on_mountain_id"
-  end
-
   create_table "mountains", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "explanation", null: false
@@ -70,7 +61,12 @@ ActiveRecord::Schema.define(version: 2021_03_21_111941) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "trekkings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "hiker_id"
+    t.integer "mountain_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "mountain_hikers", "hikers"
-  add_foreign_key "mountain_hikers", "mountains"
 end

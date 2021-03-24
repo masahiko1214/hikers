@@ -17,6 +17,13 @@
   align-items: center;
 }
 
+
+.mountain-img-show{
+  width: 35%;
+  height: auto;
+  
+}
+
 .show-btn{
   display: flex;
   align-items: center;
@@ -34,11 +41,7 @@
 }
 
 
-.mountain-img-show{
-  width: 35%;
-  height: auto;
-  
-}
+
 
 
 .show{

@@ -13,8 +13,7 @@
 
 ### Association
 
-- has_many :mountain_hikers
-- has_many :mountains, through: mountain_hikers
+has_one    :mountain_hiker
 
 ## mountains テーブル
 
@@ -34,9 +33,8 @@
 ### Association
 
 - has_many :mountain_hikers
-- has_many :hikers, through: mountain_hikers
 
-## mountain_hikers テーブル 
+## trekkings テーブル 
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |

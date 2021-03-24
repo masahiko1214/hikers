@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :mountains, only: [:index, :new, :create, :show, :edit] do
   resources :trekkings, only: [:index, :new]
   end
+  resources :descriptions,only: [:index, :new]
   resources :hikers, only: :show
 end

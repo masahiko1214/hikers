@@ -1,0 +1,23 @@
+      <div class="trekking-index-name">
+       <%= current_hiker.name %>さんが現在登っている山
+       </div>
+        <div class='trekking-img'>
+          <%= image_tag(@mountain.image, class: "trekking-index-img") %>
+          </div>
+          <div class="trekking-index-name">
+            <%= @mountain.name %>(<%= @mountain.elevation %>m)
+         </div>
+
+<div class="index-btn">
+       <%= link_to "下山後に押してください", new_mountain_trekking_path(@mountain.id) ,class:"index-go-btn"%>
+       </div>
+
+
+
+
+
+
+
+
+<%#= current_hiker.name %>
+<%#= @mountain.municipality %>

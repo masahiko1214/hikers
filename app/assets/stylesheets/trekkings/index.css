@@ -1,0 +1,40 @@
+.trekking-index-name{
+  font-size: 2rem;
+  font-family: fantasy;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:1rem
+  
+}
+
+
+
+.trekking-img{
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trekking-index-img{
+  width: 40%;
+  height: auto;
+  
+}
+
+.index-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+
+}
+
+.index-go-btn{
+  padding: 0.4em 0.8em;
+  font-size: 2em;
+  color: black;
+  border: 0.3rem solid #006edc;
+  border-radius: 20px;
+}

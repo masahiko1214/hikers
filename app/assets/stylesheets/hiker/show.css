@@ -1,30 +1,30 @@
-.show-name{
+.mypeage{
+  width: 100%;
+  min-width: 800px;
+  display: flex;
+  justify-content: center;  
+}
+
+
+.mypeage-main{
+width: 50%;
+  background-color: white;
+  padding-bottom: 2rem;
+}
+
+.mypeage-top{
+  border-bottom: 2px #999999 solid;
   font-size: 2rem;
   font-family: fantasy;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top:1rem
-  
 }
 
 
-
-.img-show{
-  margin: 1rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.mountain-img-show{
-  width: 35%;
-  height: auto;
-  
-}
-
-.show-btn{
+.mypeage-advise{
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,19 +32,8 @@
 
 }
 
-.show-go-btn{
-  padding: 0.4em 0.8em;
-  font-size: 2em;
-  color: black;
-  border: 0.3rem solid #006edc;
-  border-radius: 20px;
-}
 
-
-
-
-
-.show{
+.mypeage-show{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,15 +41,15 @@
 }
 
 
-.show-main {
-  width: 50%;
+.mypeage-show-main {
+  width: 45%;
   height: 50%;
   margin-top:1rem; /*枠線の上の空白*/
   margin-bottom:2rem /*枠線の下の空白*/
   
 }
 
-.show-contents{
+.mypeage-show-contents{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,21 +58,35 @@
   padding:0px 1rem 0px 1rem /*枠線の中の空白*/
 }
 
-
-
-.show-label{
+.mypeage-label{
   font-weight: bold;
   border-bottom: 0.1rem solid crimson;
-  margin: 0.7rem;
+  margin: 1rem;
 }
 
-.show-main-content{
+.mypeage-main-content{
   font-size: 1.1rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   
+}
+
+.mypeage-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem 0;
+padding-bottom: 1.3rem;
+}
+
+.mypeage-go-btn{
+  padding: 0.4em 0.8em;
+  font-size: 2em;
+  color: black;
+  border: 0.3rem solid #006edc;
+  border-radius: 20px;
 }

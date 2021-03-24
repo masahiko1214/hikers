@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MountainHikerTest < ActiveSupport::TestCase
+class TrekkingTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

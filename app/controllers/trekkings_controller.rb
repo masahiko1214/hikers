@@ -1,6 +1,7 @@
 class TrekkingsController < ApplicationController
-  before_action :authenticate_hiker!
 
+
+  
   def index
     @mountain = Mountain.find(params[:mountain_id])
     

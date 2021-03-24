@@ -8,7 +8,9 @@
             <%= @mountain.name %>(<%= @mountain.elevation %>m)
          </div>
 
-
+<div class="index-btn">
+       <%= link_to "下山後に押してください", new_mountain_trekking_path(@mountain.id) ,class:"index-go-btn"%>
+       </div>
 
 
 

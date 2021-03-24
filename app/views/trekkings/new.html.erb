@@ -1,0 +1,10 @@
+<div class="trekking-top-new">
+       <div class="trekking-top-comment">お疲れ様でした！！</div>
+       </div>
+
+
+<div class="calorie-top">
+<div class="calorie-comment">おめでとうございます、今回の消費カロリーは</div>
+<div class="calorie"><%= @mountain.calorie(current_hiker.weight,@mountain.level.id,@mountain.time_mountain.id) %>kal</div>
+<div class="calorie-comment">です</div>
+</div>

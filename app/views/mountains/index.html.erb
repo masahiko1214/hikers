@@ -9,9 +9,17 @@
 
 
 <ul class='mountain-lists'>
+
 <% @mountains.each do |mountain| %>
       <li class='mountain-list'>
         <%= link_to mountain_path(mountain.id) do %>
+<% if mountain.level.id == 2 %>
+
+  <div class='beginner'> \ 初心者お勧め / </div>
+<% else %>
+<div class = "blank"> \ ここは空白 / </div>
+<% end %>
+
         <div class='mountain-img-content'>
           <%= image_tag(mountain.image, class: "mountain-img") %>
         </div>
@@ -19,11 +27,31 @@
           <h3 class='mountain-name'>
             <%= mountain.name %>
           </h3>
+
           <div class='mountain-address'>
-            <span><%= mountain.level.name %><br><%= mountain.prefecture.name %></span>
-          </div>
+
+            
+            <% if mountain.level.id == 4 %>
+
+            &#x1f4aa; <%= mountain.level.name %> &#x1f4aa;
+            
+            <% else %>
+
+            <%= mountain.level.name %>
+
+            <% end %>
+            </div>
+            
+            <div class='mountain-address'>
+            
+            <%= mountain.prefecture.name %></span>
+           </div>
+
+
+          
         </div>
         <% end %>
         <% end %>
       </li>
 </ul>
+

@@ -12,7 +12,9 @@
   <body>
   <header class="header-3">
   <div class="header-inner">
+  <%= link_to root_path do %>
     <%= image_tag "hikers.png", class:"hikers-icon" %>
+    <% end %>
     <nav class="header-nav">
 
 <% if hiker_signed_in? %>

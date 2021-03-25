@@ -22,7 +22,7 @@
                <h1 class="form-name">
                  山の名前を入力して下さい
               </h1>
-              <%= f.text_area :name, class:"form-name-mountain", placeholder:"山名（必須 10文字まで)" %>
+              <%= f.text_area :name, class:"form-mountain-field", placeholder:"山名（必須 10文字まで)" %>
          </div>
         <div class="form-group">
              <h1 class="form-name">
@@ -34,7 +34,7 @@
                   <h1 class="form-name">
                       山の標高
                   </h1>
-                <%= f.text_field :elevation, class:"form-mountain-elevation",  placeholder:"例）1400(単位はmです) " %>
+                <%= f.text_field :elevation, class:"form-mountain-field",  placeholder:"例）1400(単位はmです) " %>
          </div>
          <div class="form-group">
               <h1 class="form-name">
@@ -58,17 +58,17 @@
                  <h1 class="form-name">
                     山のある市町村
                 </h1>
-                       <%= f.text_field :municipality, class:"form-mountain-municipality",  placeholder:"例）福岡市 " %>
+                       <%= f.text_field :municipality, class:"form-mountain-field",  placeholder:"例）福岡市 " %>
            </div>
             <div class="form-group">
                 <h1 class="form-name">
                        山のある住所
                 </h1>
-                     <%= f.text_field :address, class:"form-mountain-address",  placeholder:"例）青山1-1 " %>
+                     <%= f.text_field :address, class:"form-mountain-field",  placeholder:"例）青山1-1 " %>
             </div>
            <div class="form-group">
-              <h1 class="form-name">
-                   <%= f.submit "投稿する" ,class:"sell-btn" %>
+              <h1 class="form-name-btn">
+                   <%= f.submit "山を投稿する" ,class:"mountain-btn" %>
               </h1>
            </div>
        <% end %>

@@ -43,6 +43,8 @@
   padding-bottom: 0.3rem;
 }
 
+
+
 .form-group{
     width: 100%;
     display: flex;
@@ -56,34 +58,75 @@
   font-size: 1.1rem;
   
 }
-
-.form-name-mountain{
-  width: 30%;
-  height: 1.4rem;
-  font-size: 0.9rem;
+.form-mountain-field{
+  box-sizing: border-box;
+  width: 40%;
+  height: 2rem;
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #333;
+  border: 0;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid #ccc;
+  border-left: none;
+  outline: 0;
+  transition: 0.3s;
+  -webkit-appearance: none;
 }
+
+.form-mountain-field:focus{
+  border: 1px solid #00b5ad;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
 
 .form-mountain-explanation{
   width: 70%;
   height: 6rem;
 }
 
-.form-mountain-elevation{
-  width: 30%;
-}
+
 
 .form-select{
-  width: 30%;
-  height: 3vh;
+  box-sizing: border-box;
+  width: 40%;
+  height: 2rem;
+  margin: 0.4rem 0;
+  font-size: 1.3rem;
+  color: #333;
+  border: 0;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid #ccc;
+  border-left: none;
+  outline: 0;
+  transition: 0.3s;
+  -webkit-appearance: none;
 }
 
-.form-mountain-municipality{
-  width: 30%;
-  height: 1.4rem;
-  font-size: 0.9rem;
+
+
+.form-name-btn{
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.9rem;
+    align-items: center;
+    margin: 0 auto;
+    height: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.2rem solid #f5f5f5;
+
 }
-.form-mountain-address{
-  width: 30%;
-  height: 1.4rem;
-  font-size: 0.9rem;
+
+.mountain-btn{
+  color: #333;
+  background:white;
+  border: 1px #00b5ad solid;
+  padding: 0.4em 1.6em;
+  font-size: 1.3rem;
+
 }

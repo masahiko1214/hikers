@@ -4,8 +4,8 @@ class TrekkingsController < ApplicationController
 
   def index
     @mountain = Mountain.find(params[:mountain_id])
-
-
+    @trekking = Trekking.new(hiker_id: current_hiker.id,mountain_id: params[:mountain_id])
+    @trekking.save
     
     
     

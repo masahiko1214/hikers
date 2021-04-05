@@ -7,7 +7,7 @@
 
 ## これは<span style="color: red; ">山×ヘルスケア</span>を目的としてアプリケーションです！！
 
-<notextile> </notextile>
+
 
 ## _作成背景、作者の 思い,願い_
 
@@ -34,6 +34,11 @@
 
 <br>
 
+## 本アプリの<span style="color: red; ">URL</span>
+
+###  https://hikers-1214.herokuapp.com
+
+<br>
 
 ## アプリの仕様   
 

@@ -38,6 +38,17 @@
 
 ###  https://hikers-1214.herokuapp.com
 
+
+<br>
+
+### テスト用アドレス
+
+a@test.com
+
+### テスト用パスワード
+
+masa1214
+
 <br>
 
 ## アプリの仕様   
@@ -96,6 +107,36 @@
 <br>
 <br>
  
+
+## 工夫した点
+
+hikerのデータから体重と山の難易度をそれぞれ初級者を6Mets,中級者を7Mets,上級者を8Metsとして時間と掛け合わせ消費カロリーを計算出来るシステムをtrekkingモデルに組み込んだ点、これにより登り終わった際は<span style="color: red; ">すぐに消費カロリーを閲覧する</span>ことが可能です。
+
+<br>
+<br>
+
+
+## 使用技術
+<br>
+
+### <span style="color: #00fa9a; "> _Git GitHub Ruby Ruby on Rails CSS HTML_ </span>
+
+
+<br>
+<br>
+
+
+## 課題や今後実装していきたい機能
+
+1. JavaScriptやReactなどのフロント機能の更なる実装
+
+2. 課金要素、具体的には実際には課金したりはしないが課金したらここまで機能を使えますよといった機能制限や条件分岐
+
+3. GoogleマップなどのAPI導入
+
+<br>
+<br>
+
 
   
 

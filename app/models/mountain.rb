@@ -2,9 +2,9 @@ class Mountain < ApplicationRecord
 
   
   with_options presence: true do
-    validates :name
-    validates :explanation
-    validates :elevation
+    validates :name, length: {  maximum: 10 }
+    validates :explanation, length: {  maximum: 300 }
+    validates :elevation, length: { minimum: 2, maximum: 4 }, numericality: {only_integer: true}
     validates :image
     validates :municipality
     end

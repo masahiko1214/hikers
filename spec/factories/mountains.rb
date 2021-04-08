@@ -7,5 +7,10 @@ FactoryBot.define do
     time_mountain_id      {2}
     prefecture_id         {2}
     municipality          {'福岡市'}
+
+    after(:build) do |message|
+      message.image.attach(io: File.open('public/images/test_image.png'), filename: 'test_image.png')
+      
+    end
   end
 end
